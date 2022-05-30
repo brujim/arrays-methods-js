@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Readable Game</title>
+    <title>Metódos em Arrays</title>
     <link rel="stylesheet" href="./template/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <h1>Array Manipulation</h1>
-    <hr>
-        <p>Let's lern something about array manipulation. Consider the array: const colors = [Red, Green, Blue]</p>
-    
-        <h3>Veryfing is an Array</h3>
-            <input type="button" value="Old Method" onclick="verifyIsArrayOld()">
-            <input type="button" value="New Method" onclick="verifyIsArrayNew()">
-            <div>
-                <p class="verify-message"></p>
-            </div>
-        <hr><br>
-        <h3>Add/Removing Array Elements</h3>
-        <input type="button" value="Pop" onclick="arrayPop()">
-        <input type="button" value="Shift" onclick="arrayShift()">
-        <input type="button" value="Push" onclick="arrayPush()">
-        <div>
-            <p class="pop-message"></p>
-        </div>
+    <header id="header">
+        <a id="logo" href="">Array Métodos</a>
+        <nav id="nav">
+            <button id="btn-mobile">
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#donation">Doação</a></li>
+            </ul>
+        </nav>
+        <script type="text/javascript" src="./src/nav-mobile.js"></script>
+    </header>
+     <footer id="footer">
+            <p id="contato">
+                Contato
+                bruno.postali@gmail.com
+            </p>
+            <p id="donation">
+                Doações
+                <img id="pix-image" src="./assets/images/pix_code.webp" alt="pix">
+            </p>
+    </footer>
 
 <script type="text/javascript" src="./src/index.js"></script>
 </body> 

@@ -76,6 +76,7 @@ function arrayPush() {
         "<span style='color: orange'>" + colors[3] + "</span>, "
     } 
     ` 
+    colors.pop()
 }
 
 console.log(colors)
