@@ -24,3 +24,13 @@ function closeModal() {
   const modal = document.getElementById('bg')  
   modal.classList.toggle('active')
 }
+
+function toggleResponse() {
+  const modal = document.getElementById('response-modal')
+  modal.classList.toggle('active')
+}
+
+function closeResponse() {
+  const modal = document.getElementById('response-modal')  
+  modal.classList.toggle('active')
+}

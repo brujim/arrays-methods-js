@@ -38,25 +38,27 @@
         </div>
         <div id="main">
             <div id="btn-methods">
-                <a href="#response"><button id="btn-mtd" onclick="arrayPush()">Push()</button></a>
-                <a href="#response"><button id="btn-mtd" onclick="arrayPop()">Pop()</button></a>
-                <a href="#response"><button id="btn-mtd" onclick="arrayShift()">Shift()</button></a>
+               <button id="btn-mtd" onclick="insertMethods(1)">Pop()</button>
+               <button id="btn-mtd" onclick="insertMethods(2)">Push()</button>      
             </div>
-            <div id="response">
+            <div id="response-modal" onclick="closeResponse()">
+                <h3 id="title"></h3>
+                <div id="response">
+                </div>
+                <div id="fade">
+                </div>
             </div>
         </div>
     </section>
-     <footer id="footer">
-            <p id="contato">
-                © 2022, Bruno J Postali | All Rights Reserved<br><br>
-                Contato <br><br>
-                <a href = "mailto:bruno.postali@gmail.com"><img id="shield" src="./assets/images/gmail.png" target="_blank"></a>
-                <a href="https://www.linkedin.com/in/bruno-jimenez-postali-500757223" target="_blank"><img id="shield" src="./assets/images/linkedin.png" target="_blank"></a>
-                <a href="https://github.com/brujim" target="_blank"><img id="shield" src="./assets/images/github.png" target="_blank"></a>
-            
-            </p>
+    <footer id="footer">
+        <p id="contato">
+            © 2022, Bruno J Postali | All Rights Reserved<br><br>
+            Contato <br><br>
+            <a href = "mailto:bruno.postali@gmail.com"><img id="shield" src="./assets/images/gmail.png" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/bruno-jimenez-postali-500757223" target="_blank"><img id="shield" src="./assets/images/linkedin.png" target="_blank"></a>
+            <a href="https://github.com/brujim" target="_blank"><img id="shield" src="./assets/images/github.png" target="_blank"></a>
+        </p>
     </footer>
-
 <script type="text/javascript" src="./src/index.js"></script>
 </body> 
 </html>
