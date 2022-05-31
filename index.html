@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./template/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header id="header">
@@ -18,20 +20,40 @@
                 <span id="hamburguer"></span>
             </button>
             <ul id="menu">
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#donation">Doação</a></li>
+                <li><span id="close-menu"><a href="#contato">Contato</a></span></li>
+                <li><span id="close-menu"><a onclick="toggleModal()">Doação</a></span></li>
             </ul>
         </nav>
         <script type="text/javascript" src="./src/nav-mobile.js"></script>
     </header>
+    <section id="body">
+        <div id="bg" onclick="closeModal()">
+            <div id="donation-modal">
+                <div id="close-box">
+                    <a id="close" onclick="closeModal(), toggleModal()">x</a>
+                </div>
+                <img id="pix-img" src="./assets/images/pix_code.webp" alt="pix"> <br><br>   
+                <p id="pix-msg">Obrigado por ajudar com projeto!</p>
+            </div>
+        </div>
+        <div id="main">
+            <div id="btn-methods">
+                <a href="#response"><button id="btn-mtd" onclick="arrayPush()">Push()</button></a>
+                <a href="#response"><button id="btn-mtd" onclick="arrayPop()">Pop()</button></a>
+                <a href="#response"><button id="btn-mtd" onclick="arrayShift()">Shift()</button></a>
+            </div>
+            <div id="response">
+            </div>
+        </div>
+    </section>
      <footer id="footer">
             <p id="contato">
-                Contato
-                bruno.postali@gmail.com
-            </p>
-            <p id="donation">
-                Doações
-                <img id="pix-image" src="./assets/images/pix_code.webp" alt="pix">
+                © 2022, Bruno J Postali | All Rights Reserved<br><br>
+                Contato <br><br>
+                <a href = "mailto:bruno.postali@gmail.com"><img id="shield" src="./assets/images/gmail.png" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/bruno-jimenez-postali-500757223" target="_blank"><img id="shield" src="./assets/images/linkedin.png" target="_blank"></a>
+                <a href="https://github.com/brujim" target="_blank"><img id="shield" src="./assets/images/github.png" target="_blank"></a>
+            
             </p>
     </footer>
 
