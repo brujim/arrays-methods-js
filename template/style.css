@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #121214;
+    background-color: #262230;
 }
 
 li {
@@ -13,10 +13,10 @@ li {
 }
 
 a {
-    color: white;
+    color: #d4445c;
     text-decoration: none;
+    cursor: pointer;
 }
-
 #header {
     height: 70px;
     padding: 1rem;
@@ -25,20 +25,26 @@ a {
     justify-content: space-between;
     background: #e7e7e7;
     font-family: 'Roboto', sans-serif;
-    background-color: #050505;
+    background-color: #1F1C26;
     box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
 }
 
 #logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;   
+    color: #d4445c;   
 }
 
 #menu {
+    font-size: .8rem;
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: .5rem;
+}
+
+#menu a:hover {
+    text-decoration: underline;
 }
 
 #btn-mobile {
@@ -46,29 +52,202 @@ a {
 }
 
 #footer {
-    background-color: #050505;
-    height: 35vh;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1F1C26;
+    position: relative;
+    height: 31.8vh;
+    width: 100%;
+    justify-content: space-around;
 }
 
 #contato {
-    color: white;
-    padding: 22px 50px;
+    color: #d4445c;
+    padding: 6% 50px;
     text-align: center;
+    font-size: .8rem;
 }
 
-#donation {
+#shield {
+    width: 8%;
+    padding: 0px 10px;
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+}
+
+#bg {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1c26d3;
+    z-index: 1000;
+}
+
+#bg.active {
+    visibility: visible;
+}
+
+#donation-modal.active {
+    display: none;
+    visibility: visible;
+}
+
+#donation-modal {
+    top: 25vh;  
+    display: block;
+    position: absolute;
+    background: #1F1C26;
+    text-align: center;
+    height: 30vh;
+    padding: 50px 0px;
+    border: solid 1px #d4445c;
+    border-radius: 10%;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+#close-box {
+    position: absolute;
+    border: solid 1px #d4445c;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    right: 10px;
+    
+}
+
+#close {
+    font-size: 25px;
+    position: absolute;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #d4445c;
+    top: -9px;
+    right: 4px;
+}
+
+#pix-img {
+    width: 40%;
+}
+
+#pix-msg {
+    font-family: 'Roboto', sans-serif;
+    color: #d4445c;
+}
+
+#main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 0px 50px;
 }
 
-#pix-image {
-    width: 150px;
-    height:150px;
+#btn-methods {
+    display: flex;
+    gap: 30px;
+    flex-wrap:wrap ;
+    align-items: center;
+    justify-content: center;
+    margin: 15vh;
 }
+
+#btn-mtd, #btn-mtd::after {
+    width: 380px;
+    height: 86px;
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(45deg, transparent 5%, #d4445c 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 18px;
+    box-shadow: 6px 0px 0px #1F1C26;
+    outline: transparent;
+    position: relative;
+  }
+#btn-mtd::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: '_2qer_23!acs';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #d4445c 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+  }
+  
+  #btn-mtd:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+
+  #response {
+      text-align: center;
+      padding: 0vh 0px 10vh 0px;
+      color: white;
+      font-family: 'Share Tech Mono';
+      font-size: 1.5rem;
+  }
+  
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
 
 @media (max-width: 600px) {
     #btn-mobile {
@@ -86,7 +265,7 @@ a {
         width: 100%;
         top: 70px;
         right: 0px;
-        background-color: #050505;
+        background-color: #1F1C26;
         box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.3);
         height: 0px;
         transition: .6s;
@@ -119,7 +298,7 @@ a {
 
     #hamburguer {
         border-top: 2px solid;
-        border-color: white;
+        border-color: #d4445c;
         width: 25px;
 
     }
@@ -129,8 +308,55 @@ a {
         display: block;
         width: 25px;
         height: 2px;
-        background: white;
+        background: #d4445c;
         margin-top: 5px;
+    }
+
+    #contato {
+        color: #d4445c;
+        padding: 15% 50px;
+        text-align: center;
+        font-size: .8rem;
+    }
+    
+    #shield {
+        width: 20%;
+        padding: 0px 10px;
+    }
+
+    #contato {
+        color: #d4445c;
+        padding: 23% 50px;
+        text-align: center;
+        font-size: .8rem;
+    }
+
+    #btn-mtd, #btn-mtd::after {
+        width: 290px;
+        height: 63px;
+        font-size: 25px;
+        font-family: 'Bebas Neue', cursive;
+        background: linear-gradient(45deg, transparent 5%, #d4445c 5%);
+        border: 0;
+        color: #fff;
+        letter-spacing: 3px;
+        line-height: 10px;
+        box-shadow: 6px 0px 0px #1F1C26;
+        outline: transparent;
+        position: relative;
+        padding: 25px;
+      }
+    #btn-mtd::after {      
+        display: none;
+      }
+
+    #main {
+        width: 80%;
+    }
+
+    #response { 
+        font-size: 20px;
+        position: relative;
     }
 }
 
