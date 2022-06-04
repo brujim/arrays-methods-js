@@ -32,14 +32,37 @@
                 <div id="close-box">
                     <a id="close" onclick="closeModal(), toggleModal()">x</a>
                 </div>
-                <img id="pix-img" src="./assets/images/pix_code.webp" alt="pix"> <br><br>   
+                <p id="pix-msg"><strong>Pix QR Code</strong></p><br>
+                <img id="pix-img" src="./assets/images/pix_code.webp" alt="pix"><br><br>
                 <p id="pix-msg">Obrigado por ajudar com projeto!</p>
+                <div id="donate-button-container">
+                    <br>
+                    <div id="donate-button"></div>
+                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                    <script>
+                    PayPal.Donation.Button({
+                    env:'production',
+                    hosted_button_id:'Y7FUKMS24B6KN',
+                    image: {
+                    src:'https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif',
+                    alt:'Faça doações com o botão do PayPal',
+                    title:'PayPal - The safer, easier way to pay online!',
+                    }
+                    }).render('#donate-button');
+                    </script>
+                    </div>
             </div>
         </div>
         <div id="main">
             <div id="btn-methods">
                <button id="btn-mtd" onclick="insertMethods(1)">Pop()</button>
-               <button id="btn-mtd" onclick="insertMethods(2)">Push()</button>      
+               <button id="btn-mtd" onclick="insertMethods(2)">Push()</button>
+               <button id="btn-mtd" onclick="insertMethods(3)">Shift()</button>
+               <button id="btn-mtd" onclick="insertMethods(4)">Unshift()</button>
+               <button id="btn-mtd" onclick="insertMethods(5)">Concat()</button>
+               <button id="btn-mtd" onclick="insertMethods(6)">Splice()</button>
+               <button id="btn-mtd" onclick="insertMethods(7)">Slice()</button>
+               <button id="btn-mtd" onclick="insertMethods(8)">toString()</button>   
             </div>
             <div id="response-modal" onclick="closeResponse()">
                 <h3 id="title"></h3>
